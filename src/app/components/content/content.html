@@ -1,0 +1,11 @@
+<!-- <form #usuarioForm="ngForm" (ngSubmit)="enviarFormulario()">
+    <p>Nome: <input name="nomeUsuario" [(ngModel)]="username" required/> </p>
+
+    <button [disabled]="!usuarioForm.form.valid" type="submit">Enviar</button>
+</form> -->
+
+<form [formGroup]="usuarioForm" (ngSubmit)="enviarFormulario()">
+    Nome: <input formControlName="nome" />
+
+    <button type="submit" [disabled]="!usuarioForm.valid">Enviar</button>
+</form>
