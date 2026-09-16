@@ -1,18 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
-import { Header } from './components/header/header';
-import { Content } from "./components/content/content";
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet, RouterLink, Content, Header],
   selector: 'app-root',
+  standalone: true,
   styleUrl: './app.css',
   templateUrl: './app.html',
+  imports: [RouterModule],
 })
-export class App {
-  appTitle = "Teste Input";
-
-  receberValor(texto: string) {
-    console.log("Valor recebido do componente Header: ", texto);
-  }
-}
+export class App {}

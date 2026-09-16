@@ -1,0 +1,16 @@
+<section class="statistics" aria-label="Resumo do estoque">
+	@for (statistic of statistics; track statistic.label) {
+		<article class="statistic-card">
+			<div class="statistic-header">
+				<span>{{ statistic.label }}</span>
+				<span class="statistic-icon" [class]="'statistic-icon--' + statistic.tone" aria-hidden="true">
+					{{ statistic.icon }}
+				</span>
+			</div>
+			<div class="statistic-value">
+				<strong>{{ statistic.value }}</strong>
+				<span>{{ statistic.unit }}</span>
+			</div>
+		</article>
+	}
+</section>

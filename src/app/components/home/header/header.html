@@ -1,0 +1,17 @@
+<header class="topbar">
+	<h1>Gestão de Estoque</h1>
+
+	<div class="topbar-actions">
+		<label class="search-field">
+			<span class="search-icon" aria-hidden="true">⌕</span>
+			<input
+				type="search"
+				[value]="searchTerm"
+				placeholder="Buscar itens, entregas..."
+				aria-label="Buscar itens e entregas"
+				(input)="updateSearch($any($event.target).value)"
+			/>
+		</label>
+		<span class="online-status"><span aria-hidden="true"></span>Depósito Online</span>
+	</div>
+</header>

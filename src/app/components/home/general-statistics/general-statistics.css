@@ -1,0 +1,14 @@
+:host { display: block; }
+.statistics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.statistic-card { display: flex; flex-direction: column; gap: 12px; min-height: 122px; box-sizing: border-box; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; }
+.statistic-header, .statistic-value { display: flex; align-items: center; justify-content: space-between; }
+.statistic-header { color: #475569; font-size: 14px; }
+.statistic-icon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 8px; font-size: 18px; font-weight: 700; }
+.statistic-icon--teal { background: #f0fdfa; color: #0d9488; }
+.statistic-icon--amber { background: #fffbeb; color: #d97706; }
+.statistic-icon--blue { background: #eff6ff; color: #2563eb; }
+.statistic-value { justify-content: flex-start; align-items: baseline; gap: 4px; }
+.statistic-value strong { font-size: 28px; line-height: 1; }
+.statistic-value span { color: #64748b; font-size: 14px; }
+@media (max-width: 900px) { .statistics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .statistics { grid-template-columns: 1fr; } }

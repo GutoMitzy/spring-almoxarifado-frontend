@@ -1,0 +1,14 @@
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="submit()" autocomplete="on">
+  <label class="field" for="usuario">
+    <span>Usuário</span>
+      <div class="input-shell">
+        <svg class="input-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z"/>
+        </svg>
+      <input formControlName="usuario" type="text" placeholder="Insira seu usuário" />
+    </div>
+  </label>
+
+  <app-password-input formControlName="senha"></app-password-input>
+  <button type="submit" [disabled]="!loginForm.valid" class="submit-btn">Entrar no Sistema</button>
+</form>
