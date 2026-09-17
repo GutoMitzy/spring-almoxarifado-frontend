@@ -6,8 +6,8 @@
 	<span>{{ item.quantidade }}</span>
 	<span>local</span>
 	<span class="item-status">
-		<span>
-			status
+		<span [class]="'status-badge status-badge--' + item.status">
+			{{ item.status }}
 		</span>
 	</span>
 </div>

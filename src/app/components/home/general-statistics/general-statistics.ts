@@ -19,14 +19,14 @@ export class GeneralStatistics {
   private readonly itemService = inject(ItemService);
 
   readonly totalItems = this.itemService.totalItems$;
-  readonly totalItensBaixa = signal(0);
-  readonly totalEntradasRecentes = signal(0);
-  readonly totalSaidasRecentes = signal(0);
+  readonly itensEmBaixa = this.itemService.itensEmBaixa$;
+  readonly entradasRecentes = this.itemService.entradasRecentes$;
+  readonly saidasRecentes = this.itemService.saidasRecentes$;
 
   readonly statistics: Statistic[] = [
     { label: 'Total de Itens', value: this.totalItems, unit: 'IDs', icon: '▣', tone: 'teal' },
-    { label: 'Itens em Baixa', value: this.totalItensBaixa, unit: 'Alertas', icon: '△', tone: 'amber' },
-    { label: 'Entradas Recentes', value: this.totalEntradasRecentes, unit: 'Hoje', icon: '+', tone: 'blue' },
-    { label: 'Saídas Recentes', value: this.totalSaidasRecentes, unit: 'Hoje', icon: '−', tone: 'teal' },
+    { label: 'Itens em Baixa', value: this.itensEmBaixa, unit: 'Alertas', icon: '△', tone: 'amber' },
+    { label: 'Entradas Recentes', value: this.entradasRecentes, unit: 'Hoje', icon: '+', tone: 'blue' },
+    { label: 'Saídas Recentes', value: this.saidasRecentes, unit: 'Hoje', icon: '−', tone: 'teal' },
   ];
 }

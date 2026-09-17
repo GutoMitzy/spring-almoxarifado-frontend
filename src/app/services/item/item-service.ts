@@ -20,6 +20,13 @@ export interface IItem {
     descricao: string;
     quantidade: number;
     categoriaNome: string;
+    status: string;
+}
+
+export interface IStatistics {
+    itensEmBaixa: number;
+    entradasRecentes: number;
+    saidasRecentes: number;
 }
 
 @Service()
@@ -32,10 +39,16 @@ export class ItemService {
     readonly items = signal<IItem[]>([]);
     readonly totalItems = signal(0);
     readonly totalPages = signal(0);
+    readonly itensEmBaixa = signal(0);
+    readonly entradasRecentes = signal(0);
+    readonly saidasRecentes = signal(0);
 
     readonly items$ = this.items.asReadonly();
     readonly totalItems$ = this.totalItems.asReadonly();
     readonly totalPages$ = this.totalPages.asReadonly();
+    readonly itensEmBaixa$ = this.itensEmBaixa.asReadonly();
+    readonly entradasRecentes$ = this.entradasRecentes.asReadonly();
+    readonly saidasRecentes$ = this.saidasRecentes.asReadonly();
 
     getAllItems(page: number, size: number): Observable<IPage<IItem>> {
         return this.http.get<IPage<IItem>>(
@@ -47,5 +60,16 @@ export class ItemService {
                 this.totalPages.set(data.totalPages);
             })
         );
+    }
+
+    getStatistics(): Observable<IStatistics> {
+        return this.http.get<IStatistics>(this.apiUrl + "/estoque")
+            .pipe(
+                tap((data) => {
+                    this.itensEmBaixa.set(data.itensEmBaixa);
+                    this.entradasRecentes.set(data.entradasRecentes);
+                    this.saidasRecentes.set(data.saidasRecentes);
+                })
+            );
     }
 }

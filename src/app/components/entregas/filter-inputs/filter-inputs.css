@@ -1,0 +1,10 @@
+:host { display: block; min-width: 0; }
+.filter-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.filter-field { display: flex; min-width: 0; flex-direction: column; gap: 6px; }
+.filter-field__label { color: #475569; font-size: 12px; font-weight: 600; line-height: 1.2; }
+.filter-field__control { display: flex; align-items: center; gap: 8px; min-height: 36px; padding: 10px 12px; overflow: hidden; border: 1px solid #e2e8f0; border-radius: 6px; background: #f8fafc; color: #0f172a; font-size: 13px; line-height: 1.2; white-space: nowrap; }
+.filter-field__control span:last-child:not(.material-icons) { overflow: hidden; text-overflow: ellipsis; }
+.filter-field__trailing-icon { margin-left: auto; color: #475569; }
+.filter-field__control--placeholder { color: #94a3b8; }
+.material-icons { font-size: 16px; line-height: 1; }
+@media (max-width: 760px) { .filter-inputs { grid-template-columns: 1fr; } }

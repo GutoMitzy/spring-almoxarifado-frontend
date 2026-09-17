@@ -1,0 +1,49 @@
+:host {
+	display: block;
+	width: 100%;
+}
+
+.notifications-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 100%;
+}
+
+.alert-item {
+	--alert-border: #dbeafe;
+	--alert-soft: #eff6ff;
+	--alert-accent: #2563eb;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	width: 100%;
+	min-height: 72px;
+	padding: 16px;
+	border: 1px solid var(--alert-border);
+	border-left-width: 4px;
+	border-radius: 8px;
+	background: #fff;
+	color: #0f172a;
+}
+
+.alert-item--urgent { --alert-border: #fee2e2; --alert-soft: #fef2f2; --alert-accent: #dc2626; }
+.alert-item--attention { --alert-border: #fef3c7; --alert-soft: #fffbeb; --alert-accent: #d97706; }
+
+.alert-icon-wrap { display: grid; flex: 0 0 40px; width: 40px; height: 40px; place-items: center; border-radius: 50%; background: var(--alert-soft); color: var(--alert-accent); }
+.material-icons { font-size: 20px; line-height: 1; }
+.alert-body { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 4px; }
+.alert-meta { display: flex; align-items: center; gap: 8px; min-width: 0; font-size: 12px; line-height: 1; }
+.status-badge { padding: 4px 8px; border: 1px solid var(--alert-border); border-radius: 6px; background: var(--alert-soft); color: var(--alert-accent); font-weight: 600; }
+.meta-separator, .alert-time { color: #94a3b8; }
+.alert-category { overflow: hidden; color: #475569; font-weight: 600; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+.alert-message { margin: 0; overflow: hidden; font-size: 14px; font-weight: 500; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
+.alert-action { display: grid; flex: 0 0 32px; width: 32px; height: 32px; padding: 8px; place-items: center; border: 0; border-radius: 6px; background: #f8fafc; color: #64748b; cursor: pointer; }
+.alert-action:hover { background: #f1f5f9; }
+.alert-action .material-icons { font-size: 16px; }
+
+@media (max-width: 560px) {
+	.alert-item { align-items: flex-start; gap: 12px; padding: 12px; }
+	.alert-meta { flex-wrap: wrap; line-height: 1.2; }
+	.alert-message { white-space: normal; }
+}

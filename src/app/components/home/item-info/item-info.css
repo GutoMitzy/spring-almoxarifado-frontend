@@ -6,7 +6,7 @@
 .item-quantity { color: #0f172a; font-size: 14px; text-align: right; }
 .item-status { overflow: visible; }
 .status-badge { display: inline-block; padding: 4px 8px; border: 1px solid; border-radius: 6px; font-size: 12px; font-weight: 600; }
-.status-badge--disponível { border-color: #dcfce7; background: #f0fdf4; color: #16a34a; }
-.status-badge--baixo-estoque { border-color: #fef3c7; background: #fffbeb; color: #d97706; }
-.status-badge--esgotado { border-color: #fee2e2; background: #fef2f2; color: #dc2626; }
+.status-badge--DISPONÍVEL { border-color: #16a34a; background: #f0fdf4; color: #16a34a; }
+.status-badge--BAIXO_ESTOQUE { border-color: #d97706; background: #fffbeb; color: #d97706; }
+.status-badge--ESGOTADO { border-color: #dc2626; background: #fef2f2; color: #dc2626; }
 @media (max-width: 900px) { .item-row { min-width: 760px; } }

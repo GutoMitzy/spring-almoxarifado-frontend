@@ -1,0 +1,10 @@
+:host { display: block; }
+.delivery-info { display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid #f1f5f9; color: #0f172a; }
+.delivery-info__icon { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 50%; background: #f0fdfa; color: #0d9488; }
+.material-icons { font-size: 18px; line-height: 1; }
+.delivery-info__body, .delivery-info__date { display: flex; min-width: 0; flex-direction: column; gap: 4px; }
+.delivery-info__body span, .delivery-info__date span { color: #64748b; font-size: 12px; }
+.delivery-info__body strong, .delivery-info__date strong { overflow: hidden; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.delivery-info__date { text-align: right; }
+.delivery-status { padding: 4px 8px; border-radius: 6px; background: #fffbeb; color: #d97706; font-size: 12px; font-weight: 600; white-space: nowrap; }
+@media (max-width: 560px) { .delivery-info { grid-template-columns: auto minmax(0, 1fr) auto; } .delivery-info__date { grid-column: 2; grid-row: 2; text-align: left; } .delivery-info > .delivery-status { grid-column: 3; grid-row: 1 / span 2; } }

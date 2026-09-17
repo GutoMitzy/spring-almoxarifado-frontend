@@ -1,0 +1,71 @@
+:host {
+	display: block;
+	min-width: 0;
+}
+
+.filter-card {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 20px;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	background: #fff;
+	color: #0f172a;
+}
+
+.filter-card__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.filter-card h2 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.new-delivery-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	min-height: 37px;
+	padding: 10px 16px;
+	border: 1px solid #0f766e;
+	border-radius: 8px;
+	background: #0d9488;
+	color: #fff;
+	cursor: pointer;
+	font: 600 14px/1 'Segoe UI', Tahoma, sans-serif;
+	white-space: nowrap;
+}
+
+.new-delivery-button:hover {
+	background: #0f766e;
+}
+
+.material-icons {
+	font-size: 16px;
+	line-height: 1;
+}
+
+@media (max-width: 760px) {
+}
+
+@media (max-width: 480px) {
+	.filter-card {
+		padding: 16px;
+	}
+
+	.filter-card__header {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.new-delivery-button {
+		align-self: flex-start;
+	}
+}
