@@ -18,8 +18,8 @@ import { IconComponent } from '../icon-component/icon-component';
   ],
 })
 export class PasswordInputComponent implements ControlValueAccessor {
-  @Input() label = 'Senha';
-  @Input() inputId = 'senha';
+  label = 'Senha';
+  inputId = 'senha';
 
   visible = false;
   value = '';

@@ -6,7 +6,8 @@
 .search-icon { color: #94a3b8; font-size: 18px; line-height: 1; }
 .search-field input { min-width: 0; flex: 1; border: 0; outline: 0; background: transparent; color: #334155; font: inherit; font-size: 14px; }
 .search-field input::placeholder { color: #94a3b8; }
-.online-status { display: flex; align-items: center; gap: 6px; color: #64748b; font-size: 12px; white-space: nowrap; }
+.status { display: flex; align-items: center; gap: 6px; color: #64748b; font-size: 12px; white-space: nowrap; }
 .online-status span { width: 8px; height: 8px; border-radius: 50%; background: #16a34a; }
+.offline-status span { width: 8px; height: 8px; border-radius: 50%; background: #a31d16; }
 @media (max-width: 900px) { .topbar { padding-inline: 20px; } .topbar-actions { gap: 12px; } .search-field { width: 220px; } }
 @media (max-width: 620px) { .topbar { align-items: stretch; flex-direction: column; } .topbar-actions { flex-wrap: wrap; } .search-field { flex: 1; width: auto; } }

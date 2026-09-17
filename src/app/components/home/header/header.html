@@ -12,6 +12,6 @@
 				(input)="updateSearch($any($event.target).value)"
 			/>
 		</label>
-		<span class="online-status"><span aria-hidden="true"></span>Depósito Online</span>
+		<span class="status" [class]="classStatus()"><span aria-hidden="true"></span>Depósito {{ status }}</span>
 	</div>
 </header>

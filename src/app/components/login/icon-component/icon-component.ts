@@ -3,11 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-icon',
   standalone: true,
-  template: `
-    <svg [attr.aria-label]="ariaLabel" [attr.role]="role" viewBox="0 0 24 24">
-      <path [attr.d]="iconPath"></path>
-    </svg>
-  `,
+  templateUrl: "./icon-component.html",
   styleUrls: ['./icon-component.css'],
 })
 export class IconComponent {

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterModule, Router } from '@angular/router';
+import { AuthService } from './services/auth/auth-service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,13 @@ import { RouterModule } from '@angular/router';
   templateUrl: './app.html',
   imports: [RouterModule],
 })
-export class App {}
+export class App {
+  private readonly router = inject(Router);
+  private readonly authService = inject(AuthService);
+
+  ngOnInit(): void {
+    if (!this.authService.isAuthenticated()) {
+      this.router.navigate(['/login']);
+    }
+  }
+}

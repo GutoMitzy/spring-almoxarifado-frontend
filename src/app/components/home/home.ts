@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ContentOverview } from './content-overview/content-overview';
-import { GeneralStatistics } from './general-statistics/general-statistics';
 import { Header } from './header/header';
 import { NavigationBar } from './navigation-bar/navigation-bar';
 import { UserProfile } from './user-profile/user-profile';
-import { AuthService } from '../../services/auth-request/auth-service';
+import { AuthService } from '../../services/auth/auth-service';
 import { Router } from '@angular/router';
 import { inject } from '@angular/core';
+import { GeneralStatistics } from './general-statistics/general-statistics';
 
 @Component({
   selector: 'app-home',

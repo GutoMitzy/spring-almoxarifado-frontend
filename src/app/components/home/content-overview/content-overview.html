@@ -22,9 +22,9 @@
 
 	<div class="table-wrapper">
 		<div class="table-header" role="row">
-			<span>CÓDIGO</span><span>ITEM</span><span>DESCRICAO</span><span>CATEGORIA.</span><span>QUANTIDADE</span><span>LOCAL</span><span>STATUS</span>
+			<span>CÓDIGO</span><span>ITEM</span><span>DESCRICAO</span><span>CATEGORIA</span><span>QUANTIDADE</span><span>LOCAL</span><span>STATUS</span>
 		</div>
-		@for (item of items; track item.itemId) {
+		@for (item of items(); track item.itemId) {
 			<app-item-info [item]="item"></app-item-info>
 		} @empty {
 			<p class="empty-state">Nenhum item encontrado.</p>
@@ -32,13 +32,13 @@
 	</div>
 
 	<footer class="pagination">
-		<span>Mostrando {{ 0 }} de {{ 0 }} itens cadastrados</span>
+		<span>Mostrando {{ pageSize }} de {{ totalItems() }} itens cadastrados</span>
 		<div class="pagination-actions">
-			<button class="button button--secondary" type="button" [disabled]="currentPage === 1">‹ Anterior</button>
-			@for (page of [1, 2, 3]; track page) {
-				<button class="page-button" [class.page-button--active]="currentPage === page" type="button">{{ page }}</button>
+			<button class="button button--secondary" type="button" (click)="prevPage()" [disabled]="currentPage === 0">‹ Anterior</button>
+			@for (page of showedPages; track page) {
+				<button class="page-button" [class.page-button--active]="currentPage === page" (click)="changePage(page)" type="button">{{ page+1 }}</button>
 			}
-			<button class="button button--secondary" type="button" [disabled]="currentPage === totalPages">Próximo ›</button>
+			<button class="button button--secondary" type="button" (click)="nextPage()" [disabled]="currentPage === totalPages()-1">Próximo ›</button>
 		</div>
 	</footer>
 </section>
