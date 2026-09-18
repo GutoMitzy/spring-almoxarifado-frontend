@@ -1,0 +1,71 @@
+<main class="register-page">
+	<section class="main-content">
+		<section class="content-area"><article class="form-card">
+			<header class="form-heading"><h2>Informações do Produto</h2><p>Insira as especificações técnicas para inclusão imediata no estoque online.</p></header>
+			<form class="item-form" aria-label="Cadastro de novo item">
+				<div class="field-grid code-row">
+                    <label class="field">
+                        <span>Código do Item</span>
+                        <input placeholder="Ex: PR-M6-50" />
+                    </label>
+                    <label class="field">
+                        <span>Descrição do Item</span>
+                        <input placeholder="Ex: Parafuso Sextavado Zincado M6 x 50mm" />
+                    </label>
+                </div>
+				<div class="field-grid category-row">
+                    <label class="field">
+                        <span>Categoria</span>
+                        <select>
+                            <option>Fixadores</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span>Unidade de Medida</span>
+                        <select>
+                            <option>Unidades</option>
+                        </select>
+                    </label>
+                </div>
+				<div class="field-grid stock-row">
+                    <label class="field">
+                        <span>Quantidade Inicial</span>
+                        <input placeholder="0" />
+                    </label>
+                    <label class="field">
+                        <span>Local de Armazenamento</span>
+                        <input placeholder="Ex: A-04" />
+                    </label>
+                    <label class="field">
+                        <span>Status Inicial</span>
+                        <select>
+                            <option>Disponível</option>
+                        </select>
+                    </label>
+                </div>
+				<div class="field-grid purchase-row">
+                    <label class="field">
+                        <span>Fornecedor Principal</span>
+                        <input placeholder="Ex: Metalúrgica FixaTudo Ltda" />
+                    </label>
+                    <label class="field">
+                        <span>Preço Unitário (R$)</span>
+                        <input placeholder="R$ 0,00" />
+                    </label>
+                    <label class="field">
+                        <span>Data de Entrada</span>
+                        <input placeholder="DD/MM/AAAA" />
+                    </label>
+                </div>
+				<label class="field notes-field">
+                    <span>Observações / Notas do Produto</span>
+                    <textarea placeholder="Digite observações complementares sobre lote, fragilidade ou detalhes do produto..."></textarea>
+                </label>
+				<footer class="form-actions">
+                    <button class="button secondary" (click)="returnToRoute()" type="button">Cancelar</button>
+                    <button class="button primary" type="button">Cadastrar Item</button>
+                </footer>
+			</form>
+		</article></section>
+	</section>
+</main>

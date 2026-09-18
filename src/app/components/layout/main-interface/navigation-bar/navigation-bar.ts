@@ -20,6 +20,7 @@ export class NavigationBar {
     { label: 'Estoque', path: "home", icon: '▣' },
     { label: 'Entregas', path: "deliveries", icon: '▱' },
     { label: 'Notificações', path: "notifications", icon: '♧', badge: 3 },
+    { label: 'Empresas', path: "companies", icon: '🖳' },
     { label: 'Configurações', path: "configurations", icon: '⚙' },
   ];
 

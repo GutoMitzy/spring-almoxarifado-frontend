@@ -12,7 +12,6 @@ import { AuthService } from '../../../services/auth/auth-service'
   templateUrl: './main-interface.html',
 })
 export class MainInterface {
-  private readonly authService = inject(AuthService);
   private readonly router = inject(Router);
   activeSection = 'Estoque';
   searchTerm = '';

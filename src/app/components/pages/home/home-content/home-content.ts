@@ -1,6 +1,6 @@
-import { Component, Input, inject, signal } from '@angular/core';
-import { ItemService, IItem, IPage } from '../../../../services/item/item-service';
-import { AuthService } from '../../../../services/auth/auth-service';
+import { Component, Input, inject } from '@angular/core';
+import { ItemService, IItem } from '../../../../services/item/item-service';
+import { Router, ActivatedRoute } from "@angular/router"
 import { ItemInfo } from '../item-info/item-info';
 
 @Component({
@@ -12,7 +12,8 @@ import { ItemInfo } from '../item-info/item-info';
 })
 export class ContentOverview {
   readonly itemService = inject(ItemService);
-  private readonly authService = inject(AuthService);
+  readonly router = inject(Router);
+  readonly activeRoute = inject(ActivatedRoute);
 
   @Input() searchTerm = '';
 
@@ -54,6 +55,12 @@ export class ContentOverview {
   changePage(page: number): void {
     this.currentPage = page;
     this.getItems();
+  }
+
+  registerItemRoute(): void {
+    this.router.navigate(['register-item'], {
+      relativeTo: this.activeRoute
+    });
   }
 
 }

@@ -29,4 +29,8 @@ export class GeneralStatistics {
     { label: 'Entradas Recentes', value: this.entradasRecentes, unit: 'Hoje', icon: '+', tone: 'blue' },
     { label: 'Saídas Recentes', value: this.saidasRecentes, unit: 'Hoje', icon: '−', tone: 'teal' },
   ];
+
+  ngOnInit(): void {
+    this.itemService.getStatistics().subscribe();
+  }
 }
