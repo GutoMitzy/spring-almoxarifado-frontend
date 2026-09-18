@@ -1,0 +1,15 @@
+.settings-card { display: flex; flex-direction: column; padding: 24px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; color: #0f172a; font-family: 'Geist', 'Segoe UI', sans-serif; }
+h2 { margin: 0; font-size: 16px; }
+.settings-list { display: flex; flex-direction: column; gap: 4px; margin-top: 20px; }
+.setting-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 66px; padding: 12px 0; border-bottom: 1px solid #e2e8f0; }
+.last-row { border-bottom: 0; padding-bottom: 0; }
+.setting-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+strong { font-size: 14px; line-height: 1.25; }
+.setting-copy span { color: #64748b; font-size: 12px; line-height: 1.25; }
+.toggle { position: relative; width: 44px; height: 24px; flex: 0 0 auto; border-radius: 99px; background: #e2e8f0; }
+.toggle::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; }
+.toggle.is-on { background: #0d9488; }
+.toggle.is-on::after { left: 23px; }
+.select-button { display: flex; align-items: center; justify-content: space-between; width: 180px; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 6px; background: #f8fafc; color: #0f172a; font: 14px 'Geist', 'Segoe UI', sans-serif; text-align: left; }
+.chevron { width: 10px; height: 10px; border-right: 2px solid #64748b; border-bottom: 2px solid #64748b; transform: rotate(45deg) translateY(-3px); }
+@media (max-width: 560px) { .setting-row { align-items: flex-start; flex-wrap: wrap; } .setting-copy { flex: 1 1 220px; } .select-button { width: 100%; } }

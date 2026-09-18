@@ -1,0 +1,19 @@
+<div class="main-interface">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">▤</div>
+      <div><strong>Almoxarifado</strong><span>Controle de estoque</span></div>
+    </div>
+    <app-navigation-bar (sectionSelected)="selectSection($event)"></app-navigation-bar>
+    <app-user-profile></app-user-profile>
+  </aside>
+
+  <main class="main-content">
+    <app-header (searchChanged)="updateSearch($event)"></app-header>
+    <div class="content-body">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
+
+

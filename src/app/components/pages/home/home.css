@@ -1,0 +1,4 @@
+:host { display: block; min-width: 0; }
+.main-content { min-width: 0; }
+.body-content { display: flex; max-width: 1440px; margin: 0 auto; flex-direction: column; gap: 24px; padding: 32px; }
+@media (max-width: 700px) { .body-content { padding: 20px; } }

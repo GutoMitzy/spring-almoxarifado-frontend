@@ -1,0 +1,12 @@
+:host { display: block; min-height: 100vh; }
+.main-interface { display: flex; min-height: 100vh; background: #f8fafc; color: #0f172a; font-family: 'Geist', 'Segoe UI', sans-serif; }
+.sidebar { width: 260px; flex: 0 0 260px; display: flex; flex-direction: column; gap: 32px; padding: 24px; background: #fff; border-right: 1px solid #e2e8f0; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 8px; background: #0d9488; color: #fff; font-size: 22px; }
+.brand strong, .brand span, .profile strong, .profile span { display: block; }
+.brand strong { font-size: 18px; }
+.brand span { margin-top: 2px; color: #64748b; font-size: 11px; text-transform: uppercase; }
+.main-content { display: flex; min-width: 0; flex: 1; flex-direction: column; }
+.content-body { min-width: 0; flex: 1; }
+@media (max-width: 900px) { .sidebar { width: 220px; flex-basis: 220px; } }
+@media (max-width: 700px) { .main-interface { display: block; } .sidebar { width: auto; min-height: auto; } .sidebar app-user-profile { display: none; } }

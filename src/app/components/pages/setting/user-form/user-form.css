@@ -1,0 +1,6 @@
+.user-form { display: flex; flex-direction: column; gap: 16px; font-family: 'Geist', 'Segoe UI', sans-serif; }
+.form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+label { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+label span { color: #475569; font-size: 14px; font-weight: 600; }
+input { width: 100%; min-width: 0; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 6px; background: #f8fafc; color: #0f172a; font: 14px 'Geist', 'Segoe UI', sans-serif; }
+@media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }

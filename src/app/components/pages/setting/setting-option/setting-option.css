@@ -1,0 +1,8 @@
+.setting-option { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 66px; padding: 12px 0; border-bottom: 1px solid #e2e8f0; font-family: 'Geist', 'Segoe UI', sans-serif; }
+.setting-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+strong { color: #0f172a; font-size: 14px; line-height: 1.25; }
+.setting-copy span { color: #64748b; font-size: 12px; line-height: 1.25; }
+.toggle { position: relative; width: 44px; height: 24px; flex: 0 0 auto; border-radius: 99px; background: #e2e8f0; }
+.toggle::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px #cbd5e1; }
+.toggle.is-on { background: #0d9488; }
+.toggle.is-on::after { left: 23px; }

@@ -1,0 +1,13 @@
+<div class="item-row">
+	<span class="item-code">{{ codItem }}</span>
+	<span class="item-description">{{ item.nome }}</span>
+	<span>{{ item.precoUnitario }}</span>
+	<strong class="item-quantity">{{ item.categoria }}</strong>
+	<span>{{ item.quantidade }}</span>
+	<span>local</span>
+	<span class="item-status">
+		<span [class]="'status-badge status-badge--' + item.status">
+			{{ item.status }}
+		</span>
+	</span>
+</div>

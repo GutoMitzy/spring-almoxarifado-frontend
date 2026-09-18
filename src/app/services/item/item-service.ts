@@ -15,12 +15,12 @@ export interface IPage<T> {
 }
 
 export interface IItem {
-    itemId: number;
     nome: string;
     descricao: string;
     quantidade: number;
-    categoriaNome: string;
+    categoria: string;
     status: string;
+    precoUnitario: number;
 }
 
 export interface IStatistics {

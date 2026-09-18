@@ -1,0 +1,104 @@
+<main class="configuration-page">
+	<header class="configuration-header">
+		<h1>Configurações do Sistema</h1>
+		<div class="header-actions">
+			<label class="search-box">
+				<span class="search-icon" aria-hidden="true"></span>
+				<input type="search" placeholder="Buscar itens, entregas..." aria-label="Buscar itens e entregas" />
+			</label>
+			<span class="online-status"><span class="status-dot" aria-hidden="true"></span>Depósito Online</span>
+		</div>
+	</header>
+
+	<section class="configuration-body" aria-label="Configurações">
+		<div class="settings-column">
+			<article class="settings-card account-card">
+				<h2>Conta do Usuário</h2>
+				<div class="profile-editor">
+					<div class="avatar" aria-label="Foto de Carlos Oliveira">CO</div>
+					<div class="profile-actions">
+						<div class="button-row">
+							<button class="button button-primary" type="button">Alterar Foto</button>
+							<button class="button button-secondary" type="button">Remover</button>
+						</div>
+						<small>JPG ou PNG de até 2MB</small>
+					</div>
+				</div>
+				<div class="form-grid">
+					<label class="field field-wide">
+						<span>Nome Completo</span>
+						<input value="Carlos Oliveira" readonly />
+					</label>
+					<label class="field">
+						<span>E-mail Corporativo</span>
+						<input value="carlos.oliveira@almoxarifado.com" readonly />
+					</label>
+					<label class="field">
+						<span>Cargo / Função</span>
+						<input value="Almoxarife Líder" readonly />
+					</label>
+				</div>
+			</article>
+
+			<article class="settings-card">
+				<h2>Preferências da Página</h2>
+				<div class="settings-list">
+					<div class="setting-row">
+						<div class="setting-copy"><strong>Modo Escuro</strong><span>Alternar o tema visual do almoxarifado para o modo escuro.</span></div>
+						<span class="toggle" aria-label="Modo escuro desativado"></span>
+					</div>
+					<div class="setting-row">
+						<div class="setting-copy"><strong>Idioma do Sistema</strong><span>Selecione o idioma padrão da interface do aplicativo.</span></div>
+						<button class="select-button" type="button">Português (BR)<span class="chevron" aria-hidden="true"></span></button>
+					</div>
+					<div class="setting-row">
+						<div class="setting-copy"><strong>Notificar Alertas Críticos</strong><span>Enviar notificações por e-mail e push em caso de estoque zerado.</span></div>
+						<span class="toggle is-on" aria-label="Alertas críticos ativados"></span>
+					</div>
+					<div class="setting-row last-row">
+						<div class="setting-copy"><strong>Relatório de Atividades Semanal</strong><span>Receba um resumo consolidado do fluxo de entradas e saídas.</span></div>
+						<span class="toggle is-on" aria-label="Relatório semanal ativado"></span>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<div class="settings-column">
+			<article class="settings-card">
+				<h2>Acessibilidade</h2>
+				<div class="settings-list">
+					<div class="setting-row">
+						<div class="setting-copy"><strong>Tamanho da Fonte</strong><span>Ajustar a escala tipográfica global.</span></div>
+						<div class="font-slider"><span>A</span><span class="slider-track"><i></i></span><b>A</b></div>
+					</div>
+					<div class="setting-row">
+						<div class="setting-copy"><strong>Alto Contraste</strong><span>Otimiza a paleta de cores para maior contraste visual.</span></div>
+						<span class="toggle" aria-label="Alto contraste desativado"></span>
+					</div>
+					<div class="setting-row last-row">
+						<div class="setting-copy"><strong>Suporte a Leitor de Tela</strong><span>Aprimora as tags semânticas ARIA da aplicação.</span></div>
+						<span class="toggle" aria-label="Suporte a leitor de tela desativado"></span>
+					</div>
+				</div>
+			</article>
+
+			<article class="settings-card">
+				<h2>Segurança da Conta</h2>
+				<div class="settings-list">
+					<div class="setting-row">
+						<div class="setting-copy"><strong>Alterar Senha</strong><span>Recomendável atualizar a cada 90 dias.</span></div>
+						<button class="button button-secondary" type="button">Editar Senha</button>
+					</div>
+					<div class="setting-row">
+						<div class="setting-copy"><strong>Autenticação em Duas Etapas (2FA)</strong><span>Camada extra de verificação por celular ou e-mail.</span></div>
+						<span class="toggle is-on" aria-label="Autenticação em duas etapas ativada"></span>
+					</div>
+					<div class="setting-row last-row">
+						<div class="setting-copy"><strong>Dispositivos Conectados</strong><span>Gerenciar suas sessões ativas no almoxarifado.</span></div>
+						<button class="button button-secondary" type="button">Visualizar</button>
+					</div>
+				</div>
+			</article>
+		</div>
+	</section>
+</main>

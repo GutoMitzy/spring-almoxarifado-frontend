@@ -1,12 +1,18 @@
 import { Routes } from '@angular/router';
-import { LoginPageComponent } from './components/login/login-page-component';
-import { Home } from './components/home/home';
-import { NotificationContent } from './components/notification/notification-content/notification-content'
-import { DeliveryContent } from './components/entregas/delivery-content/delivery-content'
+import { LoginPageComponent } from './components/pages/login/login-page-component';
+import { Home } from './components/pages/home/home';
+import { Notification } from './components/pages/notification/notification'
+import { Delivery } from './components/pages/delivery/delivery'
+import { Setting } from './components/pages/setting/setting'
+import { MainInterface } from './components/layout/main-interface/main-interface';
 
 export const routes: Routes = [
     {path: "login", component: LoginPageComponent},
-    {path: "home", component: Home},
-    {path: "notifications", component: NotificationContent},
-    {path: "deliveries", component: DeliveryContent},
+    {path: "home", component: MainInterface, children: [
+        {path: '', component: Home},
+        {path: "notifications", component: Notification},
+        {path: "deliveries", component: Delivery},
+        {path: "configurations", component: Setting}
+    ]},
+    
 ];
