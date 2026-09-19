@@ -1,11 +1,13 @@
 <section class="deliveries-card" aria-labelledby="deliveries-title">
 	<header class="deliveries-card__header">
 		<div><h2 id="deliveries-title">Entregas</h2><p>Acompanhe os pedidos em trânsito e recebidos.</p></div>
-		<span class="deliveries-count">3 entregas</span>
+		<span class="deliveries-count">{{ totalEntradas() }} Entregas</span>
 	</header>
 	<div class="deliveries-card__list">
-		<app-delivery-info></app-delivery-info>
-		<app-delivery-info></app-delivery-info>
-		<app-delivery-info></app-delivery-info>
+		@for(entrada of entradas(); track entrada.id) {
+			<app-delivery-info [entrada]="entrada" ></app-delivery-info>
+		} @empty {
+			<p class="empty-state">Nenhum item encontrado.</p>
+		}
 	</div>
 </section>

@@ -16,7 +16,7 @@ interface NavigationItem {
 export class NavigationBar {
   @Output() readonly sectionSelected = new EventEmitter<string>();
 
-  readonly items: NavigationItem[] = [
+  readonly sections: NavigationItem[] = [
     { label: 'Estoque', path: "home", icon: '▣' },
     { label: 'Entregas', path: "deliveries", icon: '▱' },
     { label: 'Notificações', path: "notifications", icon: '♧', badge: 3 },

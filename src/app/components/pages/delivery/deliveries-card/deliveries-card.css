@@ -8,8 +8,4 @@
 .deliveries-card__list { display: flex; flex-direction: column; border-top: 1px solid #e2e8f0; }
 .delivery-row { display: grid; grid-template-columns: 1fr 1.5fr auto; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
 .delivery-row > span:not(.delivery-status) { color: #64748b; }
-.delivery-status { padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600; }
-.delivery-status--late { background: #fef2f2; color: #dc2626; }
-.delivery-status--transit { background: #fffbeb; color: #d97706; }
-.delivery-status--received { background: #f0fdfa; color: #0f766e; }
 @media (max-width: 620px) { .delivery-row { grid-template-columns: 1fr auto; } .delivery-row > span:not(.delivery-status) { grid-column: 1 / -1; grid-row: 2; } }

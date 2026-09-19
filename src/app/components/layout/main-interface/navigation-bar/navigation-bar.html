@@ -1,15 +1,15 @@
 <nav class="navigation" aria-label="Navegação principal">
-	@for (item of items; track item.label) {
+	@for (section of sections; track section.label) {
 		<button
 			class="navigation-item"
-			[class.navigation-item--active]="activeSection === item.label"
+			[class.navigation-item--active]="activeSection === section.label"
 			type="button"
-			(click)="selectSection(item.label, item.path)"
+			(click)="selectSection(section.label, section.path)"
 		>
-			<span class="navigation-icon" aria-hidden="true">{{ item.icon }}</span>
-			<span>{{ item.label }}</span>
-			@if (item.badge) {
-				<span class="navigation-badge">{{ item.badge }}</span>
+			<span class="navigation-icon" aria-hidden="true">{{ section.icon }}</span>
+			<span>{{ section.label }}</span>
+			@if (section.badge) {
+				<span class="navigation-badge">{{ section.badge }}</span>
 			}
 		</button>
 	}
